@@ -27,6 +27,8 @@
 		2C4B301F2A7038E000C39F77 /* ShareView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C4B301E2A7038E000C39F77 /* ShareView.swift */; };
 		2C6A0A502A742A5D003BFDA1 /* FavoritesScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C6A0A4F2A742A5D003BFDA1 /* FavoritesScreen.swift */; };
 		2C6A0A522A745AD3003BFDA1 /* QIconButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C6A0A512A745AD3003BFDA1 /* QIconButton.swift */; };
+		2C6A0A542A7466B6003BFDA1 /* SearchabeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C6A0A532A7466B6003BFDA1 /* SearchabeView.swift */; };
+		2C6A0A562A747BB6003BFDA1 /* QuoteListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C6A0A552A747BB6003BFDA1 /* QuoteListView.swift */; };
 		2C741EE82A740FF700BB74CF /* QContextMenuButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C741EE72A740FF700BB74CF /* QContextMenuButton.swift */; };
 		2C94316E2A60178B00C39554 /* QuoteModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C94316D2A60178B00C39554 /* QuoteModel.swift */; };
 		2CAC6ED02A614CD3004BB446 /* QuoteColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CAC6ECF2A614CD3004BB446 /* QuoteColor.swift */; };
@@ -69,6 +71,8 @@
 		2C4B301E2A7038E000C39F77 /* ShareView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShareView.swift; sourceTree = "<group>"; };
 		2C6A0A4F2A742A5D003BFDA1 /* FavoritesScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoritesScreen.swift; sourceTree = "<group>"; };
 		2C6A0A512A745AD3003BFDA1 /* QIconButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QIconButton.swift; sourceTree = "<group>"; };
+		2C6A0A532A7466B6003BFDA1 /* SearchabeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchabeView.swift; sourceTree = "<group>"; };
+		2C6A0A552A747BB6003BFDA1 /* QuoteListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuoteListView.swift; sourceTree = "<group>"; };
 		2C741EE72A740FF700BB74CF /* QContextMenuButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QContextMenuButton.swift; sourceTree = "<group>"; };
 		2C94316D2A60178B00C39554 /* QuoteModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuoteModel.swift; sourceTree = "<group>"; };
 		2CAC6ECF2A614CD3004BB446 /* QuoteColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuoteColor.swift; sourceTree = "<group>"; };
@@ -121,15 +125,15 @@
 			isa = PBXGroup;
 			children = (
 				2CFDEC8F2A67E54200D9CAFF /* Quotes--Info.plist */,
+				2C12C4F32A58B538002323BC /* Quotes_App.swift */,
+				2C12C4F72A58B539002323BC /* Assets.xcassets */,
+				2C12C4F92A58B539002323BC /* Preview Content */,
 				2CFDEC8C2A67E46100D9CAFF /* CustomFonts */,
 				2C1418812A6713B7001E564E /* Utils */,
 				2C257E312A606AD800761AB8 /* Extensions */,
 				2C94316C2A60177B00C39554 /* Models */,
 				2C12C5042A58BDFF002323BC /* Views */,
 				2C12C5012A58B847002323BC /* Screens */,
-				2C12C4F32A58B538002323BC /* Quotes_App.swift */,
-				2C12C4F72A58B539002323BC /* Assets.xcassets */,
-				2C12C4F92A58B539002323BC /* Preview Content */,
 			);
 			path = "Quotes+";
 			sourceTree = "<group>";
@@ -145,9 +149,10 @@
 		2C12C5012A58B847002323BC /* Screens */ = {
 			isa = PBXGroup;
 			children = (
+				2C6A0A582A747F12003BFDA1 /* GetStarted */,
+				2C6A0A572A747D56003BFDA1 /* Shared */,
 				2C6A0A4E2A742A48003BFDA1 /* Favorites */,
 				2C37FF162A600D8A00A701DB /* Home */,
-				2C12C5022A58B858002323BC /* GetStarted.swift */,
 				2C37FF112A60040A00A701DB /* RootScreen.swift */,
 			);
 			path = Screens;
@@ -166,6 +171,7 @@
 				2CFDEC962A67ECC600D9CAFF /* QFonstPicker.swift */,
 				2CCEE6FD2A6C392900A7E089 /* QuoteCard.swift */,
 				2C4B301E2A7038E000C39F77 /* ShareView.swift */,
+				2C6A0A532A7466B6003BFDA1 /* SearchabeView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -219,6 +225,23 @@
 			path = Favorites;
 			sourceTree = "<group>";
 		};
+		2C6A0A572A747D56003BFDA1 /* Shared */ = {
+			isa = PBXGroup;
+			children = (
+				2C1418772A66E36D001E564E /* QuoteInput.swift */,
+				2C6A0A552A747BB6003BFDA1 /* QuoteListView.swift */,
+			);
+			path = Shared;
+			sourceTree = "<group>";
+		};
+		2C6A0A582A747F12003BFDA1 /* GetStarted */ = {
+			isa = PBXGroup;
+			children = (
+				2C12C5022A58B858002323BC /* GetStarted.swift */,
+			);
+			path = GetStarted;
+			sourceTree = "<group>";
+		};
 		2C94316C2A60177B00C39554 /* Models */ = {
 			isa = PBXGroup;
 			children = (
@@ -232,7 +255,6 @@
 			isa = PBXGroup;
 			children = (
 				2C37FF172A600DA200A701DB /* CreateQuoteScreen.swift */,
-				2C1418772A66E36D001E564E /* QuoteInput.swift */,
 				2C1418792A66EFC0001E564E /* StyleQuote.swift */,
 			);
 			path = CreateQuote;
@@ -336,6 +358,8 @@
 				2C12C5062A58BE08002323BC /* LabelledDivider.swift in Sources */,
 				2CAC6ED42A615AC7004BB446 /* QImageButton.swift in Sources */,
 				2C741EE82A740FF700BB74CF /* QContextMenuButton.swift in Sources */,
+				2C6A0A542A7466B6003BFDA1 /* SearchabeView.swift in Sources */,
+				2C6A0A562A747BB6003BFDA1 /* QuoteListView.swift in Sources */,
 				2C12C5032A58B858002323BC /* GetStarted.swift in Sources */,
 				2C14187A2A66EFC0001E564E /* StyleQuote.swift in Sources */,
 				2C6A0A522A745AD3003BFDA1 /* QIconButton.swift in Sources */,
