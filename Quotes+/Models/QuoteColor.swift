@@ -7,25 +7,6 @@
 
 import SwiftUI
 
-//struct QuoteColor: Identifiable {
-//  var id: String
-//  var color: Color
-//  var isGradient: Bool
-//  var gradient: LinearGradient
-//  
-//  init(
-//    id: String,
-//    color: Color = .purple,
-//    isGradient: Bool = false,
-//    gradient: LinearGradient = LinearGradient(colors: [.red, .blue], startPoint: .top, endPoint: .bottom)
-//  ) {
-//    self.id = id
-//    self.color = color
-//    self.isGradient = isGradient
-//    self.gradient = gradient
-//  }
-//}
-
 let availableQuoteColors: [any QuoteBackground] = [
   QuoteGradientBG(
     id: "red-to-purple",
@@ -59,7 +40,7 @@ let availableQuoteColors: [any QuoteBackground] = [
       endPoint: .bottomTrailing
     )
   ),
-  QuoteBasicBGColor(id: "still-blue", color: .blue),
-	QuoteBasicBGColor(id: "still-teal", color: .teal),
-	QuoteBasicBGColor(id: "still-mint", color: .mint)
+//  QuoteBasicBGColor(id: "still-blue", color: .blue),
+//	QuoteBasicBGColor(id: "still-teal", color: .teal),
+//	QuoteBasicBGColor(id: "still-mint", color: .mint)
 ]

@@ -47,6 +47,8 @@
 		2CFDEC932A67E79F00D9CAFF /* AdventPro-VariableFont.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 2CFDEC922A67E79F00D9CAFF /* AdventPro-VariableFont.ttf */; };
 		2CFDEC952A67E7B800D9CAFF /* DancingScript-VariableFont.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 2CFDEC942A67E7B800D9CAFF /* DancingScript-VariableFont.ttf */; };
 		2CFDEC972A67ECC600D9CAFF /* QFonstPicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CFDEC962A67ECC600D9CAFF /* QFonstPicker.swift */; };
+		FB70E9492B63EE7B008BA76F /* Color+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB70E9482B63EE7B008BA76F /* Color+Extension.swift */; };
+		FB70E94B2B63FAFF008BA76F /* QColorPicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB70E94A2B63FAFF008BA76F /* QColorPicker.swift */; };
 		FB83F6E52B62514C00BB7D7F /* StyleQuote+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB83F6E42B62514C00BB7D7F /* StyleQuote+Extension.swift */; };
 		FB83F6E92B62545900BB7D7F /* QTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB83F6E82B62545900BB7D7F /* QTextField.swift */; };
 		FB83F6EB2B6257FE00BB7D7F /* QuoteBackground.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB83F6EA2B6257FE00BB7D7F /* QuoteBackground.swift */; };
@@ -93,6 +95,8 @@
 		2CFDEC922A67E79F00D9CAFF /* AdventPro-VariableFont.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "AdventPro-VariableFont.ttf"; sourceTree = "<group>"; };
 		2CFDEC942A67E7B800D9CAFF /* DancingScript-VariableFont.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "DancingScript-VariableFont.ttf"; sourceTree = "<group>"; };
 		2CFDEC962A67ECC600D9CAFF /* QFonstPicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QFonstPicker.swift; sourceTree = "<group>"; };
+		FB70E9482B63EE7B008BA76F /* Color+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Color+Extension.swift"; sourceTree = "<group>"; };
+		FB70E94A2B63FAFF008BA76F /* QColorPicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QColorPicker.swift; sourceTree = "<group>"; };
 		FB83F6E42B62514C00BB7D7F /* StyleQuote+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "StyleQuote+Extension.swift"; sourceTree = "<group>"; };
 		FB83F6E82B62545900BB7D7F /* QTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QTextField.swift; sourceTree = "<group>"; };
 		FB83F6EA2B6257FE00BB7D7F /* QuoteBackground.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuoteBackground.swift; sourceTree = "<group>"; };
@@ -179,6 +183,7 @@
 				2C4B301E2A7038E000C39F77 /* ShareView.swift */,
 				2C6A0A532A7466B6003BFDA1 /* SearchabeView.swift */,
 				FB83F6E82B62545900BB7D7F /* QTextField.swift */,
+				FB70E94A2B63FAFF008BA76F /* QColorPicker.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -200,6 +205,7 @@
 				2C14187D2A67137E001E564E /* TextAlignment+Extension.swift */,
 				2C14187F2A67139C001E564E /* Image+Extension.swift */,
 				FB83F6E42B62514C00BB7D7F /* StyleQuote+Extension.swift */,
+				FB70E9482B63EE7B008BA76F /* Color+Extension.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -369,11 +375,13 @@
 				2C741EE82A740FF700BB74CF /* QContextMenuButton.swift in Sources */,
 				2C6A0A542A7466B6003BFDA1 /* SearchabeView.swift in Sources */,
 				2C6A0A562A747BB6003BFDA1 /* QuoteListView.swift in Sources */,
+				FB70E94B2B63FAFF008BA76F /* QColorPicker.swift in Sources */,
 				2C12C5032A58B858002323BC /* GetStarted.swift in Sources */,
 				FB83F6E92B62545900BB7D7F /* QTextField.swift in Sources */,
 				2C14187A2A66EFC0001E564E /* StyleQuote.swift in Sources */,
 				2C6A0A522A745AD3003BFDA1 /* QIconButton.swift in Sources */,
 				2C14187C2A67135F001E564E /* Alignment+Extension.swift in Sources */,
+				FB70E9492B63EE7B008BA76F /* Color+Extension.swift in Sources */,
 				2C37FF102A60028A00A701DB /* QAppleButton.swift in Sources */,
 				2CBC27EE2A6178CC00FF6AB9 /* QTextStyle.swift in Sources */,
 				2C1418802A67139C001E564E /* Image+Extension.swift in Sources */,

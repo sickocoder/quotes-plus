@@ -7,6 +7,8 @@
 
 import Foundation
 import SwiftData
+import SwiftUI
+
 
 @Model
 final class QuoteModel {
@@ -42,11 +44,21 @@ final class QuoteModel {
   }
   
   func getBackgroundColor() -> QuoteBackground {
-    let bg = availableQuoteColors.first { quoteBackground in
+		let bg = availableQuoteColors.first { quoteBackground in
       return quoteBackground.id == self.backgroundColorID
     }
     
     guard let background = bg else {
+			if let customBgColor = Color(hex: backgroundColorID) {
+				return QuoteGradientBG(
+					id: UUID().uuidString,
+					gradient: LinearGradient(
+						colors: [customBgColor, customBgColor.opacity(0.9)],
+						startPoint: .topLeading,
+						endPoint: .bottomTrailing
+					)
+				)
+			}
       return availableQuoteColors[2]
     }
     
