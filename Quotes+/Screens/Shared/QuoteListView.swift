@@ -16,20 +16,17 @@ struct QuoteListView: View {
   @Environment(\.modelContext) private var modelContext
   
   func makeQuoteCard(_ quote: QuoteModel) -> some View {
-    QuoteCard(quoteConfig: quote)
+    QuoteCard(quoteConfig: quote, isInExportMode: false)
       .contextMenu {
         QContextMenuButton(
-          title: quote.isFavorite ? "Remote from favorites": "Add to favorites",
+          title: quote.isFavorite ? "Remove from favorites": "Add to favorites",
           systemImage: "star\(quote.isFavorite ? ".fill" : "")"
         ) {
           quote.isFavorite.toggle()
           modelContext.insert(quote)
         }
         
-        QContextMenuButton(
-          title: "Delete",
-          systemImage: "trash"
-        ) {
+        QContextMenuButton(title: "Delete", systemImage: "trash") {
           modelContext.delete(quote)
         }
       }
@@ -49,7 +46,10 @@ struct QuoteListView: View {
       searchText: searchText,
       data: quotes,
       predicate: #Predicate<QuoteModel> { quote in
-        quote.quoteText.localizedLowercase.contains(searchText.localizedLowercase)
+        return quote
+					.quoteText
+					.localizedLowercase
+					.contains(searchText.localizedLowercase)
       }
     ) { data in
       ScrollView(.vertical, showsIndicators: false) {

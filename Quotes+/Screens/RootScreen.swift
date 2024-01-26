@@ -8,6 +8,7 @@
 import SwiftUI
 
 enum Tab: String {
+	case explore = "Explore"
   case yourQuotes = "Your quotes"
   case favorites = "Favorites quotes"
   case profile = "Profile"
@@ -18,6 +19,10 @@ struct RootScreen: View {
   
   var body: some View {
     TabView(selection: $selection) {
+			Text("Explore page")
+				.tabItem { Image(systemName: "doc.append.fill") }
+				.tag(Tab.explore)
+			
       HomeScreen()
         .tabItem { Image(systemName: "house.fill") }
         .tag(Tab.yourQuotes)
@@ -35,5 +40,6 @@ struct RootScreen: View {
 
 #Preview {
   RootScreen()
+    .modelContainer(for: QuoteModel.self)
 }
 

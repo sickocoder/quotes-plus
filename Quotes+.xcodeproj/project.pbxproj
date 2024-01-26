@@ -37,7 +37,7 @@
 		2CAC6ED72A61610F004BB446 /* Collections in Frameworks */ = {isa = PBXBuildFile; productRef = 2CAC6ED62A61610F004BB446 /* Collections */; };
 		2CAC6ED92A61610F004BB446 /* OrderedCollections in Frameworks */ = {isa = PBXBuildFile; productRef = 2CAC6ED82A61610F004BB446 /* OrderedCollections */; };
 		2CBC27E72A61719C00FF6AB9 /* View+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CBC27E62A61719C00FF6AB9 /* View+Extension.swift */; };
-		2CBC27EA2A6176A900FF6AB9 /* QColorPicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CBC27E92A6176A900FF6AB9 /* QColorPicker.swift */; };
+		2CBC27EA2A6176A900FF6AB9 /* QBackgroundPicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CBC27E92A6176A900FF6AB9 /* QBackgroundPicker.swift */; };
 		2CBC27EC2A6177B700FF6AB9 /* QTextAlign.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CBC27EB2A6177B700FF6AB9 /* QTextAlign.swift */; };
 		2CBC27EE2A6178CC00FF6AB9 /* QTextStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CBC27ED2A6178CC00FF6AB9 /* QTextStyle.swift */; };
 		2CBC27F02A6188CF00FF6AB9 /* QTextSize.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CBC27EF2A6188CF00FF6AB9 /* QTextSize.swift */; };
@@ -47,6 +47,9 @@
 		2CFDEC932A67E79F00D9CAFF /* AdventPro-VariableFont.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 2CFDEC922A67E79F00D9CAFF /* AdventPro-VariableFont.ttf */; };
 		2CFDEC952A67E7B800D9CAFF /* DancingScript-VariableFont.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 2CFDEC942A67E7B800D9CAFF /* DancingScript-VariableFont.ttf */; };
 		2CFDEC972A67ECC600D9CAFF /* QFonstPicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CFDEC962A67ECC600D9CAFF /* QFonstPicker.swift */; };
+		FB83F6E52B62514C00BB7D7F /* StyleQuote+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB83F6E42B62514C00BB7D7F /* StyleQuote+Extension.swift */; };
+		FB83F6E92B62545900BB7D7F /* QTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB83F6E82B62545900BB7D7F /* QTextField.swift */; };
+		FB83F6EB2B6257FE00BB7D7F /* QuoteBackground.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB83F6EA2B6257FE00BB7D7F /* QuoteBackground.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -79,7 +82,7 @@
 		2CAC6ED12A614EF9004BB446 /* QColorPill.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QColorPill.swift; sourceTree = "<group>"; };
 		2CAC6ED32A615AC7004BB446 /* QImageButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QImageButton.swift; sourceTree = "<group>"; };
 		2CBC27E62A61719C00FF6AB9 /* View+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "View+Extension.swift"; sourceTree = "<group>"; };
-		2CBC27E92A6176A900FF6AB9 /* QColorPicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QColorPicker.swift; sourceTree = "<group>"; };
+		2CBC27E92A6176A900FF6AB9 /* QBackgroundPicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QBackgroundPicker.swift; sourceTree = "<group>"; };
 		2CBC27EB2A6177B700FF6AB9 /* QTextAlign.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QTextAlign.swift; sourceTree = "<group>"; };
 		2CBC27ED2A6178CC00FF6AB9 /* QTextStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QTextStyle.swift; sourceTree = "<group>"; };
 		2CBC27EF2A6188CF00FF6AB9 /* QTextSize.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QTextSize.swift; sourceTree = "<group>"; };
@@ -90,6 +93,9 @@
 		2CFDEC922A67E79F00D9CAFF /* AdventPro-VariableFont.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "AdventPro-VariableFont.ttf"; sourceTree = "<group>"; };
 		2CFDEC942A67E7B800D9CAFF /* DancingScript-VariableFont.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "DancingScript-VariableFont.ttf"; sourceTree = "<group>"; };
 		2CFDEC962A67ECC600D9CAFF /* QFonstPicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QFonstPicker.swift; sourceTree = "<group>"; };
+		FB83F6E42B62514C00BB7D7F /* StyleQuote+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "StyleQuote+Extension.swift"; sourceTree = "<group>"; };
+		FB83F6E82B62545900BB7D7F /* QTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QTextField.swift; sourceTree = "<group>"; };
+		FB83F6EA2B6257FE00BB7D7F /* QuoteBackground.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuoteBackground.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -162,7 +168,7 @@
 			isa = PBXGroup;
 			children = (
 				2C37FF0C2A60022900A701DB /* Buttons */,
-				2CBC27E92A6176A900FF6AB9 /* QColorPicker.swift */,
+				2CBC27E92A6176A900FF6AB9 /* QBackgroundPicker.swift */,
 				2CBC27EB2A6177B700FF6AB9 /* QTextAlign.swift */,
 				2CBC27ED2A6178CC00FF6AB9 /* QTextStyle.swift */,
 				2CBC27EF2A6188CF00FF6AB9 /* QTextSize.swift */,
@@ -172,6 +178,7 @@
 				2CCEE6FD2A6C392900A7E089 /* QuoteCard.swift */,
 				2C4B301E2A7038E000C39F77 /* ShareView.swift */,
 				2C6A0A532A7466B6003BFDA1 /* SearchabeView.swift */,
+				FB83F6E82B62545900BB7D7F /* QTextField.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -192,6 +199,7 @@
 				2C14187B2A67135F001E564E /* Alignment+Extension.swift */,
 				2C14187D2A67137E001E564E /* TextAlignment+Extension.swift */,
 				2C14187F2A67139C001E564E /* Image+Extension.swift */,
+				FB83F6E42B62514C00BB7D7F /* StyleQuote+Extension.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -247,6 +255,7 @@
 			children = (
 				2C94316D2A60178B00C39554 /* QuoteModel.swift */,
 				2CAC6ECF2A614CD3004BB446 /* QuoteColor.swift */,
+				FB83F6EA2B6257FE00BB7D7F /* QuoteBackground.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -361,6 +370,7 @@
 				2C6A0A542A7466B6003BFDA1 /* SearchabeView.swift in Sources */,
 				2C6A0A562A747BB6003BFDA1 /* QuoteListView.swift in Sources */,
 				2C12C5032A58B858002323BC /* GetStarted.swift in Sources */,
+				FB83F6E92B62545900BB7D7F /* QTextField.swift in Sources */,
 				2C14187A2A66EFC0001E564E /* StyleQuote.swift in Sources */,
 				2C6A0A522A745AD3003BFDA1 /* QIconButton.swift in Sources */,
 				2C14187C2A67135F001E564E /* Alignment+Extension.swift in Sources */,
@@ -368,13 +378,15 @@
 				2CBC27EE2A6178CC00FF6AB9 /* QTextStyle.swift in Sources */,
 				2C1418802A67139C001E564E /* Image+Extension.swift in Sources */,
 				2CBC27E72A61719C00FF6AB9 /* View+Extension.swift in Sources */,
+				FB83F6EB2B6257FE00BB7D7F /* QuoteBackground.swift in Sources */,
 				2C4B301F2A7038E000C39F77 /* ShareView.swift in Sources */,
+				FB83F6E52B62514C00BB7D7F /* StyleQuote+Extension.swift in Sources */,
 				2C37FF142A60075600A701DB /* HomeScreen.swift in Sources */,
 				2C1418782A66E36D001E564E /* QuoteInput.swift in Sources */,
 				2CFDEC972A67ECC600D9CAFF /* QFonstPicker.swift in Sources */,
 				2C257E332A606AEA00761AB8 /* Binding+Extension.swift in Sources */,
 				2C37FF122A60040A00A701DB /* RootScreen.swift in Sources */,
-				2CBC27EA2A6176A900FF6AB9 /* QColorPicker.swift in Sources */,
+				2CBC27EA2A6176A900FF6AB9 /* QBackgroundPicker.swift in Sources */,
 				2C12C4F42A58B538002323BC /* Quotes_App.swift in Sources */,
 				2C6A0A502A742A5D003BFDA1 /* FavoritesScreen.swift in Sources */,
 				2C37FF182A600DA200A701DB /* CreateQuoteScreen.swift in Sources */,
@@ -517,7 +529,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"Quotes+/Preview Content\"";
-				DEVELOPMENT_TEAM = 3A4MTG5775;
+				DEVELOPMENT_TEAM = MKJWKJW85G;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "Quotes--Info.plist";
@@ -548,7 +560,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"Quotes+/Preview Content\"";
-				DEVELOPMENT_TEAM = 3A4MTG5775;
+				DEVELOPMENT_TEAM = MKJWKJW85G;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "Quotes--Info.plist";

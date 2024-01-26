@@ -10,15 +10,15 @@ import SwiftUI
 struct QColorPill: View {
   var selectedColorQuoteID: String
   
-  var colorConfig: QuoteColor
-  var onPress: (_ color: QuoteColor) -> ()
+  var colorConfig: QuoteBackground
+  var onPress: (_ color: QuoteBackground) -> ()
   
   private var isSelected: Bool {
     selectedColorQuoteID == colorConfig.id
   }
   
   private var isGradient: Bool {
-    colorConfig.isGradient
+    colorConfig is QuoteGradientBG
   }
   
   var body: some View {
@@ -27,8 +27,8 @@ struct QColorPill: View {
     } label: {
       VStack {}
         .frame(width: 48, height: 48)
-        .background(isGradient ? nil : colorConfig.color)
-        .background(isGradient ? colorConfig.gradient : nil)
+				.background(isGradient ? nil : (colorConfig as! QuoteBasicBGColor).color)
+        .background(isGradient ? (colorConfig as! QuoteGradientBG).gradient : nil)
         .clipShape(Circle())
         .overlay(
           Circle()

@@ -11,19 +11,10 @@ struct CreateQuoteScreen: View {
   @State var isShowingStyling: Bool = false
   @Namespace var heroAnimation
   
-  @State private var quoteConfig: QuoteModel = QuoteModel(
-    quoteText: "",
-    author: "NA",
-    textAlign: "text.aligncenter",
-    backgroundColorID: availableQuoteColors[0].id,
-    fontFamily: "default",
-    fontSize: 20,
-    fontWeight: "medium",
-    isFavorite: false
-  )
+  @State private var quoteConfig: QuoteModel = BASE_QUOTE
   
   @State var quote: String? = ""
-  @State var selectedColor: QuoteColor = availableQuoteColors[0]
+  @State var selectedColor: any QuoteBackground = availableQuoteColors[0]
   
   @State var selectedAlignment: Alignment = .leading
   @State var selectedTextStyle: String = "normal"

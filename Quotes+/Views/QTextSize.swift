@@ -9,7 +9,7 @@ import SwiftUI
 
 struct QTextSize: View {
   @Binding var selectedSize: Float
-  var selectedColor: QuoteColor
+  var selectedColor: QuoteBackground
   
   var body: some View {
     HStack {
@@ -24,9 +24,8 @@ struct QTextSize: View {
         .foregroundStyle(.white)
         .setBackground(
           shouldApply: selectedSize == (availableTextSizes[key] ?? 20),
-          isGradient: selectedColor.isGradient,
-          gradient: selectedColor.gradient,
-          color: selectedColor.color
+          gradient: (selectedColor as? QuoteGradientBG)?.gradient,
+          color: (selectedColor as? QuoteBasicBGColor)?.color
         )
         .clipShape(RoundedRectangle(cornerRadius: 8))
         

@@ -9,7 +9,7 @@ import SwiftUI
 
 struct QTextAlign: View {
   @Binding var selectedAlignment: String
-  var selectedColor: QuoteColor
+  var selectedColor: QuoteBackground
   
   var body: some View {
     ForEach(textAligmentToImage, id: \.self) { key in
@@ -20,9 +20,8 @@ struct QTextAlign: View {
       }
       .setTint(
         shouldApply: key == selectedAlignment,
-        isGradient: selectedColor.isGradient,
-        gradient: selectedColor.gradient,
-        color: selectedColor.color
+        gradient: (selectedColor as? QuoteGradientBG)!.gradient,
+				color: (selectedColor as? QuoteBasicBGColor)?.color
       )
     }
   }

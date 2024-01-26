@@ -30,3 +30,13 @@ let availableTextSizes: OrderedDictionary<String, Float> = [
   "extra-large": 48
 ]
 
+let BASE_QUOTE = QuoteModel(
+	quoteText: "",
+	author: "NA",
+	textAlign: "text.aligncenter",
+	backgroundColorID: availableQuoteColors[0].id,
+	fontFamily: "default",
+	fontSize: 20,
+	fontWeight: "medium",
+	isFavorite: false
+)

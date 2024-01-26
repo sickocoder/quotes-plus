@@ -9,7 +9,7 @@ import SwiftUI
 
 struct QTextStyle: View {
   @Binding var selectedStyle: String
-  var selectedColor: QuoteColor
+  var selectedColor: any QuoteBackground
   
   var body: some View {
     ForEach(Array(textStyleImage.keys), id: \.self) { key in
@@ -28,7 +28,11 @@ struct QTextStyle: View {
         .bold()
         .foregroundStyle(.white)
         .frame(width: 40, height: 40)
-        .setBackground(shouldApply: selectedStyle == key, isGradient: selectedColor.isGradient, gradient: selectedColor.gradient, color: selectedColor.color)
+        .setBackground(
+					shouldApply: selectedStyle == key,
+					gradient: (selectedColor as? QuoteGradientBG)?.gradient,
+					color: (selectedColor as? QuoteBasicBGColor)?.color
+				)
         .clipShape(RoundedRectangle(cornerRadius: 8))
       }
     }

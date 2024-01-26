@@ -27,6 +27,7 @@ struct FavoritesScreen: View {
 
 #Preview {
   FavoritesScreen()
+    .modelContainer(for: QuoteModel.self)
 }
 
 

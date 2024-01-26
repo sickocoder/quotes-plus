@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct QFonstPicker: View {
-  var selectedColorConfig: QuoteColor
+  var selectedColorConfig: QuoteBackground
   var selectedFont: String
   var onPress: (_ font: String) -> ()
   
@@ -30,9 +30,8 @@ struct QFonstPicker: View {
                   .padding(.horizontal, 12)
                   .setBackground(
                     shouldApply: selectedFont.lowercased() == word.lowercased(),
-                    isGradient: selectedColorConfig.isGradient,
-                    gradient: selectedColorConfig.gradient,
-                    color: selectedColorConfig.color
+                    gradient: (selectedColorConfig as? QuoteGradientBG)?.gradient,
+                    color: (selectedColorConfig as? QuoteBasicBGColor)?.color
                   )
                   .foregroundColor(.white)
                   .clipShape(RoundedRectangle(cornerRadius: 8, style: .continuous))

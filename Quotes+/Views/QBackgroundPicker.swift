@@ -7,13 +7,13 @@
 
 import SwiftUI
 
-struct QColorPicker: View {
+struct QBackgroundPicker: View {
   @Binding var selectedColorID: String
   
   var body: some View {
     ScrollView(.horizontal, showsIndicators: false) {
       HStack {
-        ForEach(availableQuoteColors) { colorConfig in
+				ForEach(availableQuoteColors, id: \.anyHashableID) { colorConfig in
           QColorPill(selectedColorQuoteID: selectedColorID, colorConfig: colorConfig) { color in
             withAnimation {
               selectedColorID = color.id
@@ -29,7 +29,7 @@ struct QColorPicker: View {
 }
 
 #Preview {
-  QColorPicker(selectedColorID: .constant(availableQuoteColors[0].id))
+  QBackgroundPicker(selectedColorID: .constant(availableQuoteColors[0].id))
 }
 
 

@@ -12,20 +12,34 @@ struct QuoteCard: View {
   var showQuotes: Bool = false
   var isInExportMode: Bool = false
   
-  private var quoteColor: QuoteColor {
+  private var quoteText: String {
+    if isInExportMode {
+      return quoteConfig.quoteText
+    }
+    
+    var limit: Int = 80
+    
+    if quoteConfig.fontSize > Float(availableTextSizes["regular"] ?? 28) { /// regular
+      limit = 30
+    }
+    
+    return "\(quoteConfig.quoteText.prefix(limit))..."
+  }
+  
+  private var quoteColor: QuoteBackground {
     quoteConfig.getBackgroundColor()
   }
   
     var body: some View {
       ZStack {
         Group {
-          if quoteColor.isGradient {
-            quoteColor.gradient
+          if quoteColor is QuoteGradientBG {
+            (quoteColor as! QuoteGradientBG).gradient
           } else {
-            quoteColor.color
+            (quoteColor as! QuoteBasicBGColor).color
           }
         }
-        .clipShape(RoundedRectangle(cornerRadius: isInExportMode ? 0 : 12))
+        .clipShape(RoundedRectangle(cornerRadius: 12))
         
         VStack(alignment: .leading) {
           if showQuotes {
@@ -34,7 +48,7 @@ struct QuoteCard: View {
               .fontWeight(.bold)
           }
           
-          Text(quoteConfig.quoteText)
+          Text(quoteText)
             .multilineTextAlignment(TextAlignment.from(alignment: Alignment.from(text: quoteConfig.textAlign)))
             .font(quoteConfig.fontFamily.lowercased() == "default" ?
               .system(size: CGFloat(quoteConfig.fontSize)) :
@@ -43,7 +57,7 @@ struct QuoteCard: View {
             .fontWeight(textStyleImage[quoteConfig.fontWeight] ?? .medium)
             .italic(quoteConfig.fontWeight == "italic")
             .frame(maxWidth: .infinity, alignment: Alignment.from(text: quoteConfig.textAlign))
-            .padding(.vertical, showQuotes ? (isInExportMode ? 60 : 30) : 0)
+            .padding(.vertical, showQuotes ? (isInExportMode ? 40 : 30) : 0)
           
           if showQuotes {
             HStack {

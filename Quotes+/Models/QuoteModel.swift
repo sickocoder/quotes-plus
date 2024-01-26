@@ -20,7 +20,16 @@ final class QuoteModel {
   var fontWeight: String
   var isFavorite: Bool
   
-  init(quoteText: String, author: String, textAlign: String, backgroundColorID: String, fontFamily: String, fontSize: Float, fontWeight: String, isFavorite: Bool) {
+  init(
+		quoteText: String,
+		author: String,
+		textAlign: String,
+		backgroundColorID: String,
+		fontFamily: String,
+		fontSize: Float,
+		fontWeight: String,
+		isFavorite: Bool
+	) {
     self.id = UUID().uuidString
     self.quoteText = quoteText
     self.author = author
@@ -32,7 +41,7 @@ final class QuoteModel {
     self.isFavorite = isFavorite
   }
   
-  func getBackgroundColor() -> QuoteColor {
+  func getBackgroundColor() -> QuoteBackground {
     let bg = availableQuoteColors.first { quoteBackground in
       return quoteBackground.id == self.backgroundColorID
     }

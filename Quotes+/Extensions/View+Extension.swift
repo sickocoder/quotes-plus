@@ -10,17 +10,18 @@ import UIKit
 
 struct TintModifier: ViewModifier {
   var shouldApply: Bool
-  var isGradient: Bool
-  var gradient: LinearGradient
-  var color: Color
+  var gradient: LinearGradient?
+  var color: Color?
   
   func body(content: Content) -> some View {
     if shouldApply {
-      if (isGradient) {
-        content.tint(gradient)
-      } else {
-        content.tint(color)
-      }
+			if let gradient = gradient {
+				content.tint(gradient)
+			}
+			
+			if let color = color {
+				content.tint(color)
+			}
     } else {
       content
     }
@@ -29,17 +30,18 @@ struct TintModifier: ViewModifier {
 
 struct BackgroundModifier: ViewModifier {
   var shouldApply: Bool
-  var isGradient: Bool
-  var gradient: LinearGradient
-  var color: Color
+  var gradient: LinearGradient?
+  var color: Color?
   
   func body(content: Content) -> some View {
     if shouldApply {
-      if (isGradient) {
-        content.background(gradient)
-      } else {
-        content.background(color)
-      }
+			if let gradient = gradient {
+				content.background(gradient)
+			}
+			
+			if let color = color {
+				content.background(color)
+			}
     } else {
       content.background(Color.black.opacity(0.2))
     }
@@ -47,21 +49,19 @@ struct BackgroundModifier: ViewModifier {
 }
 
 extension View {
-  func setTint(shouldApply: Bool = true, isGradient: Bool, gradient: LinearGradient, color: Color) -> some View {
+  func setTint(shouldApply: Bool = true, gradient: LinearGradient?, color: Color?) -> some View {
     
     modifier(TintModifier(
       shouldApply: shouldApply,
-      isGradient: isGradient,
       gradient: gradient,
       color: color
     ))
   }
   
-  func setBackground(shouldApply: Bool = true, isGradient: Bool, gradient: LinearGradient, color: Color) -> some View {
+  func setBackground(shouldApply: Bool = true, gradient: LinearGradient?, color: Color?) -> some View {
     
     modifier(BackgroundModifier(
       shouldApply: shouldApply,
-      isGradient: isGradient,
       gradient: gradient,
       color: color
     ))

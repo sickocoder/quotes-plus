@@ -20,7 +20,7 @@ struct StyleQuote: View {
   @State private var sheetPresented : Bool = false
   
   let animation: Namespace.ID
-  var selectedColor: QuoteColor {
+  var selectedColor: QuoteBackground {
     quoteConfig.getBackgroundColor()
   }
   
@@ -28,7 +28,8 @@ struct StyleQuote: View {
     ScrollView(showsIndicators: false) {
       QuoteCard(
         quoteConfig: quoteConfig,
-        showQuotes: true
+        showQuotes: true,
+        isInExportMode: true
       )
       .padding(.horizontal)
       .matchedGeometryEffect(id: AnimationID.hero, in: animation, anchor: .top)
@@ -39,7 +40,7 @@ struct StyleQuote: View {
       }
       
       VStack {
-        QColorPicker(selectedColorID: $quoteConfig.backgroundColorID)
+        QBackgroundPicker(selectedColorID: $quoteConfig.backgroundColorID)
         
         VStack {
           Divider()
@@ -114,25 +115,6 @@ struct StyleQuote: View {
         ShareView(activityItems: [data])
       }
     })
-  }
-}
-
-extension StyleQuote {
-  func getCardView() -> some View {
-    QuoteCard(
-      quoteConfig: quoteConfig,
-      showQuotes: true,
-      isInExportMode: true
-    )
-    .frame(width: UIScreen.main.bounds.width)
-  }
-  
-  @MainActor
-  private func render() -> UIImage? {
-    
-    let renderer = ImageRenderer(content: getCardView())
-    renderer.scale = displayScale
-    return renderer.uiImage
   }
 }
 

@@ -22,3 +22,15 @@ public extension Binding where Value: Equatable {
     )
   }
 }
+
+public extension Binding where Value == String {
+  func limit(to: Int) -> Self {
+    if self.wrappedValue.count > to {
+      DispatchQueue.main.async {
+        self.wrappedValue = String(self.wrappedValue.dropLast())
+      }
+    }
+    
+    return self
+  }
+}

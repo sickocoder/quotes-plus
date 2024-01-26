@@ -32,6 +32,7 @@ struct HomeScreen: View {
 
 #Preview {
   HomeScreen()
+    .modelContainer(for: QuoteModel.self)
 }
 
 
