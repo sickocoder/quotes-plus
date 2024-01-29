@@ -6,10 +6,10 @@
 //
 
 import SwiftUI
+import Photos
 
 struct CreateQuoteScreen: View {
   @State var isShowingStyling: Bool = false
-  @Namespace var heroAnimation
   
   @State private var quoteConfig: QuoteModel = BASE_QUOTE
   
@@ -26,16 +26,20 @@ struct CreateQuoteScreen: View {
       if !isShowingStyling {
         QuoteInput(
           quoteConfig: $quoteConfig,
-          isShowingStyling: $isShowingStyling,
-          animation: heroAnimation
+          isShowingStyling: $isShowingStyling
         )
       } else {
         StyleQuote(
-          quoteConfig: quoteConfig,
-          animation: heroAnimation
+          quoteConfig: quoteConfig
         )
       }
     }
+		.onAppear {
+			PHPhotoLibrary.requestAuthorization(for: .readWrite) { (status) in
+				DispatchQueue.main.async {}
+			}
+
+		}
     .toolbar(.hidden, for: .tabBar)
   }
 }

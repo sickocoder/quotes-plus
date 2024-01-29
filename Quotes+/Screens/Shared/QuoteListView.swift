@@ -9,14 +9,15 @@ import SwiftUI
 import SwiftData
 
 struct QuoteListView: View {
+	@Environment(\.displayScale) var displayScale
+	
   var quotes: [QuoteModel]
   var searchText: String
   
-  @Namespace var heroAnimation
   @Environment(\.modelContext) private var modelContext
   
   func makeQuoteCard(_ quote: QuoteModel) -> some View {
-    QuoteCard(quoteConfig: quote, isInExportMode: false)
+		QuoteCard(quoteConfig: quote, showQuotes: true, isInExportMode: false)
       .contextMenu {
         QContextMenuButton(
           title: quote.isFavorite ? "Remove from favorites": "Add to favorites",
@@ -35,7 +36,7 @@ struct QuoteListView: View {
   
   func makeListItem(_ quote: QuoteModel) -> some View {
     NavigationLink {
-      StyleQuote(quoteConfig: quote, animation: heroAnimation)
+      StyleQuote(quoteConfig: quote)
     } label: {
       makeQuoteCard(quote)
     }

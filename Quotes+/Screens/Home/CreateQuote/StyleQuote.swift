@@ -19,7 +19,7 @@ struct StyleQuote: View {
   @State private var shouldShowContent: Bool = false
   @State private var sheetPresented : Bool = false
   
-  let animation: Namespace.ID
+//  let animation: Namespace.ID
   var selectedColor: QuoteBackground {
     quoteConfig.getBackgroundColor()
   }
@@ -32,7 +32,6 @@ struct StyleQuote: View {
         isInExportMode: true
       )
       .padding(.horizontal)
-      .matchedGeometryEffect(id: AnimationID.hero, in: animation, anchor: .top)
       .onTapGesture {
         withAnimation(.spring()) {
           $shouldShowContent.wrappedValue.toggle()
@@ -40,7 +39,17 @@ struct StyleQuote: View {
       }
       
       VStack {
-        QBackgroundPicker(selectedColorID: $quoteConfig.backgroundColorID)
+				QBackgroundPicker(
+					selectedColorID: $quoteConfig.backgroundColorID
+				) { imageData in
+					withAnimation {
+						if imageData != nil {
+							quoteConfig.backgroundImage = QuoteImageBG(imageData: imageData!)
+						} else {
+							quoteConfig.backgroundImage = nil
+						}
+					}
+				}
         
         VStack {
           Divider()
@@ -123,8 +132,7 @@ struct Style_Previews: PreviewProvider {
     @Namespace var animation
     var body: some View {
       StyleQuote(
-        quoteConfig: dumbQuote,
-        animation: animation
+        quoteConfig: dumbQuote
       )
     }
   }

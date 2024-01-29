@@ -24,19 +24,17 @@ struct SearchabeView<DataType, Content: View>: View {
   }
   
     var body: some View {
-      ZStack {
-        if filteredData.isEmpty {
-          VStack {
-            if searchText.isEmpty {
-              Text("No quotes to show.")
-            } else {
-              Text("No quotes found.")
-            }
-          }
-        } else {
-          content(filteredData)
-        }
-      }
+			if filteredData.isEmpty {
+				VStack {
+					if searchText.isEmpty {
+						Text("No quotes to show.")
+					} else {
+						Text("No quotes found.")
+					}
+				}
+			} else {
+				content(filteredData)
+			}
     }
 }
 

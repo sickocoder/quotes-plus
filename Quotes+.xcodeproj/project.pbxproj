@@ -49,6 +49,8 @@
 		2CFDEC972A67ECC600D9CAFF /* QFonstPicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CFDEC962A67ECC600D9CAFF /* QFonstPicker.swift */; };
 		FB70E9492B63EE7B008BA76F /* Color+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB70E9482B63EE7B008BA76F /* Color+Extension.swift */; };
 		FB70E94B2B63FAFF008BA76F /* QColorPicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB70E94A2B63FAFF008BA76F /* QColorPicker.swift */; };
+		FB70E94D2B63FBBE008BA76F /* QImagePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB70E94C2B63FBBE008BA76F /* QImagePicker.swift */; };
+		FB70E9512B641BB1008BA76F /* QQuoteCardBackground.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB70E9502B641BB1008BA76F /* QQuoteCardBackground.swift */; };
 		FB83F6E52B62514C00BB7D7F /* StyleQuote+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB83F6E42B62514C00BB7D7F /* StyleQuote+Extension.swift */; };
 		FB83F6E92B62545900BB7D7F /* QTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB83F6E82B62545900BB7D7F /* QTextField.swift */; };
 		FB83F6EB2B6257FE00BB7D7F /* QuoteBackground.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB83F6EA2B6257FE00BB7D7F /* QuoteBackground.swift */; };
@@ -97,6 +99,8 @@
 		2CFDEC962A67ECC600D9CAFF /* QFonstPicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QFonstPicker.swift; sourceTree = "<group>"; };
 		FB70E9482B63EE7B008BA76F /* Color+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Color+Extension.swift"; sourceTree = "<group>"; };
 		FB70E94A2B63FAFF008BA76F /* QColorPicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QColorPicker.swift; sourceTree = "<group>"; };
+		FB70E94C2B63FBBE008BA76F /* QImagePicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QImagePicker.swift; sourceTree = "<group>"; };
+		FB70E9502B641BB1008BA76F /* QQuoteCardBackground.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QQuoteCardBackground.swift; sourceTree = "<group>"; };
 		FB83F6E42B62514C00BB7D7F /* StyleQuote+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "StyleQuote+Extension.swift"; sourceTree = "<group>"; };
 		FB83F6E82B62545900BB7D7F /* QTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QTextField.swift; sourceTree = "<group>"; };
 		FB83F6EA2B6257FE00BB7D7F /* QuoteBackground.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuoteBackground.swift; sourceTree = "<group>"; };
@@ -184,6 +188,8 @@
 				2C6A0A532A7466B6003BFDA1 /* SearchabeView.swift */,
 				FB83F6E82B62545900BB7D7F /* QTextField.swift */,
 				FB70E94A2B63FAFF008BA76F /* QColorPicker.swift */,
+				FB70E94C2B63FBBE008BA76F /* QImagePicker.swift */,
+				FB70E9502B641BB1008BA76F /* QQuoteCardBackground.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -383,6 +389,7 @@
 				2C14187C2A67135F001E564E /* Alignment+Extension.swift in Sources */,
 				FB70E9492B63EE7B008BA76F /* Color+Extension.swift in Sources */,
 				2C37FF102A60028A00A701DB /* QAppleButton.swift in Sources */,
+				FB70E94D2B63FBBE008BA76F /* QImagePicker.swift in Sources */,
 				2CBC27EE2A6178CC00FF6AB9 /* QTextStyle.swift in Sources */,
 				2C1418802A67139C001E564E /* Image+Extension.swift in Sources */,
 				2CBC27E72A61719C00FF6AB9 /* View+Extension.swift in Sources */,
@@ -395,6 +402,7 @@
 				2C257E332A606AEA00761AB8 /* Binding+Extension.swift in Sources */,
 				2C37FF122A60040A00A701DB /* RootScreen.swift in Sources */,
 				2CBC27EA2A6176A900FF6AB9 /* QBackgroundPicker.swift in Sources */,
+				FB70E9512B641BB1008BA76F /* QQuoteCardBackground.swift in Sources */,
 				2C12C4F42A58B538002323BC /* Quotes_App.swift in Sources */,
 				2C6A0A502A742A5D003BFDA1 /* FavoritesScreen.swift in Sources */,
 				2C37FF182A600DA200A701DB /* CreateQuoteScreen.swift in Sources */,

@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import SwiftData
 
 protocol QuoteBackground {
 	var id: String { get set }
@@ -26,7 +27,13 @@ struct QuoteGradientBG: QuoteBackground {
 	var gradient: LinearGradient
 }
 
-struct QuoteImageBG: QuoteBackground {
-	var id: String
-	var imageData: Data
+@Model
+final class QuoteImageBG {
+	@Attribute(.unique) var id: String
+	@Attribute(.externalStorage) var imageData: Data
+	
+	init(imageData: Data) {
+		self.id = UUID().uuidString
+		self.imageData = imageData
+	}
 }

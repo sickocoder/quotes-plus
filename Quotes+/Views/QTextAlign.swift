@@ -20,7 +20,7 @@ struct QTextAlign: View {
       }
       .setTint(
         shouldApply: key == selectedAlignment,
-        gradient: (selectedColor as? QuoteGradientBG)!.gradient,
+        gradient: (selectedColor as? QuoteGradientBG)?.gradient,
 				color: (selectedColor as? QuoteBasicBGColor)?.color
       )
     }

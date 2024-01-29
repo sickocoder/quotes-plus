@@ -50,8 +50,16 @@ struct BackgroundModifier: ViewModifier {
 
 extension View {
   func setTint(shouldApply: Bool = true, gradient: LinearGradient?, color: Color?) -> some View {
+		
+		guard gradient != nil, color != nil else {
+			return modifier(TintModifier(
+				shouldApply: shouldApply,
+				gradient: nil,
+				color: .accentColor
+			))
+		}
     
-    modifier(TintModifier(
+    return modifier(TintModifier(
       shouldApply: shouldApply,
       gradient: gradient,
       color: color
@@ -60,7 +68,15 @@ extension View {
   
   func setBackground(shouldApply: Bool = true, gradient: LinearGradient?, color: Color?) -> some View {
     
-    modifier(BackgroundModifier(
+		guard gradient != nil, color != nil else {
+			return modifier(BackgroundModifier(
+				shouldApply: shouldApply,
+				gradient: nil,
+				color: .accentColor
+			))
+		}
+		
+    return modifier(BackgroundModifier(
       shouldApply: shouldApply,
       gradient: gradient,
       color: color

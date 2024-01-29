@@ -8,32 +8,35 @@
 import SwiftUI
 
 struct QuoteInput: View {
+	@Environment(\.modelContext) private var modelContext
+	
 	@Binding var quoteConfig: QuoteModel
 	var selectedColor: any QuoteBackground {
 		quoteConfig.getBackgroundColor()
 	}
 	
 	@Binding var isShowingStyling: Bool
-	let animation: Namespace.ID
 	
 	@FocusState private var focused: Bool?
+	let screenDimensions = UIScreen.main.bounds.size
 	
 	var body: some View {
 		ZStack {
-			Group {
-				if selectedColor is QuoteGradientBG {
-					(selectedColor as! QuoteGradientBG).gradient
-				} else {
-					(selectedColor as! QuoteBasicBGColor).color
-				}
-			}.ignoresSafeArea(.all)
-			
 			VStack {
 				Spacer()
 				QTextField(text: $quoteConfig.quoteText)
 				
 				Spacer()
-				QBackgroundPicker(selectedColorID: $quoteConfig.backgroundColorID)
+				
+				QBackgroundPicker(selectedColorID: $quoteConfig.backgroundColorID) { imageData in
+					withAnimation {
+						if let imageData = imageData {
+							quoteConfig.backgroundImage = QuoteImageBG(imageData: imageData)
+						} else {
+							quoteConfig.backgroundImage = nil
+						}
+					}
+				}
 				
 				Button {
 					self.dismissKeyboard()
@@ -54,8 +57,11 @@ struct QuoteInput: View {
 				.opacity(quoteConfig.quoteText.isEmpty ? 0.4 : 1)
 				.disabled(quoteConfig.quoteText.isEmpty)
 			}
+			.background(QQuoteCardBackground(background: selectedColor, backgroundImage: quoteConfig.backgroundImage, width: screenDimensions.width, fullHeight: true))
 		}
-		.matchedGeometryEffect(id: AnimationID.hero, in: animation, anchor: .top)
+		.onAppear {
+			modelContext.insert(quoteConfig)
+		}
 	}
 }
 

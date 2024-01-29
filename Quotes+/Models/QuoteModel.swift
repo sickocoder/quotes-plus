@@ -17,6 +17,7 @@ final class QuoteModel {
   var author: String
   var textAlign: String
   var backgroundColorID: String
+	var backgroundImage: QuoteImageBG?
   var fontFamily: String
   var fontSize: Float
   var fontWeight: String
@@ -37,6 +38,7 @@ final class QuoteModel {
     self.author = author
     self.textAlign = textAlign
     self.backgroundColorID = backgroundColorID
+		self.backgroundImage = nil
     self.fontFamily = fontFamily
     self.fontSize = fontSize
     self.fontWeight = fontWeight
@@ -59,11 +61,20 @@ final class QuoteModel {
 					)
 				)
 			}
-      return availableQuoteColors[2]
+			
+			return availableQuoteColors[2]
     }
     
     return background
   }
+	
+	func getBackgroundImage() -> QuoteImageBG {
+		guard let bgImage = self.backgroundImage else {
+			return QuoteImageBG(imageData: Data())
+		}
+		
+		return QuoteImageBG(imageData: bgImage.imageData)
+	}
 }
 
-let dumbQuote = QuoteModel(quoteText: "test quote", author: "no author", textAlign: "text.aligncenter", backgroundColorID: availableQuoteColors[0].id, fontFamily: "Merienda", fontSize: 20, fontWeight: "medium", isFavorite: false)
+let dumbQuote = QuoteModel(quoteText: "test quote", author: "no author", textAlign: "text.aligncenter", backgroundColorID: (availableQuoteColors[0] as! QuoteGradientBG).id, fontFamily: "Merienda", fontSize: 20, fontWeight: "medium", isFavorite: false)

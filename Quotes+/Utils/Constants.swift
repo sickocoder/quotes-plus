@@ -34,7 +34,7 @@ let BASE_QUOTE = QuoteModel(
 	quoteText: "",
 	author: "NA",
 	textAlign: "text.aligncenter",
-	backgroundColorID: availableQuoteColors[0].id,
+	backgroundColorID: (availableQuoteColors[0] as! QuoteGradientBG).id,
 	fontFamily: "default",
 	fontSize: 20,
 	fontWeight: "medium",
