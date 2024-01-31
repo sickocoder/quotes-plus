@@ -54,6 +54,7 @@
 		FB83F6E52B62514C00BB7D7F /* StyleQuote+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB83F6E42B62514C00BB7D7F /* StyleQuote+Extension.swift */; };
 		FB83F6E92B62545900BB7D7F /* QTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB83F6E82B62545900BB7D7F /* QTextField.swift */; };
 		FB83F6EB2B6257FE00BB7D7F /* QuoteBackground.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB83F6EA2B6257FE00BB7D7F /* QuoteBackground.swift */; };
+		FBB7E2A82B6925E400E9F883 /* EduVICWANTBeginner-VariableFont_wght.ttf in Resources */ = {isa = PBXBuildFile; fileRef = FBB7E2A72B6925E400E9F883 /* EduVICWANTBeginner-VariableFont_wght.ttf */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -104,6 +105,7 @@
 		FB83F6E42B62514C00BB7D7F /* StyleQuote+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "StyleQuote+Extension.swift"; sourceTree = "<group>"; };
 		FB83F6E82B62545900BB7D7F /* QTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QTextField.swift; sourceTree = "<group>"; };
 		FB83F6EA2B6257FE00BB7D7F /* QuoteBackground.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuoteBackground.swift; sourceTree = "<group>"; };
+		FBB7E2A72B6925E400E9F883 /* EduVICWANTBeginner-VariableFont_wght.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "EduVICWANTBeginner-VariableFont_wght.ttf"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -138,9 +140,9 @@
 		2C12C4F22A58B538002323BC /* Quotes+ */ = {
 			isa = PBXGroup;
 			children = (
+				2C12C4F72A58B539002323BC /* Assets.xcassets */,
 				2CFDEC8F2A67E54200D9CAFF /* Quotes--Info.plist */,
 				2C12C4F32A58B538002323BC /* Quotes_App.swift */,
-				2C12C4F72A58B539002323BC /* Assets.xcassets */,
 				2C12C4F92A58B539002323BC /* Preview Content */,
 				2CFDEC8C2A67E46100D9CAFF /* CustomFonts */,
 				2C1418812A6713B7001E564E /* Utils */,
@@ -284,6 +286,7 @@
 		2CFDEC8C2A67E46100D9CAFF /* CustomFonts */ = {
 			isa = PBXGroup;
 			children = (
+				FBB7E2A72B6925E400E9F883 /* EduVICWANTBeginner-VariableFont_wght.ttf */,
 				2CFDEC942A67E7B800D9CAFF /* DancingScript-VariableFont.ttf */,
 				2CFDEC922A67E79F00D9CAFF /* AdventPro-VariableFont.ttf */,
 				2CFDEC8D2A67E4B600D9CAFF /* Merienda-VariableFont_wght.ttf */,
@@ -358,6 +361,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				2C12C4FB2A58B539002323BC /* Preview Assets.xcassets in Resources */,
+				FBB7E2A82B6925E400E9F883 /* EduVICWANTBeginner-VariableFont_wght.ttf in Resources */,
 				2CFDEC8E2A67E4B600D9CAFF /* Merienda-VariableFont_wght.ttf in Resources */,
 				2CFDEC952A67E7B800D9CAFF /* DancingScript-VariableFont.ttf in Resources */,
 				2C12C4F82A58B539002323BC /* Assets.xcassets in Resources */,
@@ -562,9 +566,13 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "dev.sickocoder.Quotes-";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -593,9 +601,13 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "dev.sickocoder.Quotes-";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};

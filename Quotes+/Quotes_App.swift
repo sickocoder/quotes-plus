@@ -14,7 +14,6 @@ struct Quotes_App: App {
     WindowGroup {
       RootScreen()
     }
-//    .modelContainer(for: QuoteModel.self)
 		.modelContainer(for: [QuoteModel.self, QuoteImageBG.self])
   }
 }

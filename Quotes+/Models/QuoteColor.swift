@@ -41,6 +41,6 @@ let availableQuoteColors: [any QuoteBackground] = [
     )
   ),
 //  QuoteBasicBGColor(id: "still-blue", color: .blue),
-//	QuoteBasicBGColor(id: "still-teal", color: .teal),
+	QuoteBasicBGColor(id: "still-teal", color: .teal),
 //	QuoteBasicBGColor(id: "still-mint", color: .mint)
 ]

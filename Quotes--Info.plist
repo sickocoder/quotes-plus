@@ -6,6 +6,7 @@
 	<string>Need to access your library</string>
 	<key>UIAppFonts</key>
 	<array>
+		<string>EduVICWANTBeginner-VariableFont_wght.ttf</string>
 		<string>Merienda-VariableFont_wght.ttf</string>
 		<string>AdventPro-VariableFont.ttf</string>
 		<string>DancingScript-VariableFont.ttf</string>

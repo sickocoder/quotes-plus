@@ -52,14 +52,7 @@ final class QuoteModel {
     
     guard let background = bg else {
 			if let customBgColor = Color(hex: backgroundColorID) {
-				return QuoteGradientBG(
-					id: UUID().uuidString,
-					gradient: LinearGradient(
-						colors: [customBgColor, customBgColor.opacity(0.9)],
-						startPoint: .topLeading,
-						endPoint: .bottomTrailing
-					)
-				)
+				return QuoteBasicBGColor(id: UUID().uuidString, color: customBgColor)
 			}
 			
 			return availableQuoteColors[2]

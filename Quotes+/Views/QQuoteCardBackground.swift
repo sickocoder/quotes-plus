@@ -30,7 +30,7 @@ struct QQuoteCardBackground: View {
 		}
 		
 		if background is QuoteBasicBGColor {
-			(background as! QuoteBasicBGColor).color
+			Rectangle().fill((background as! QuoteBasicBGColor).color.gradient)
 				.ignoresSafeArea(.all)
 		}
 		
@@ -40,12 +40,12 @@ struct QQuoteCardBackground: View {
 					Image(data: backgroundImage.imageData)
 						.resizable()
 						.aspectRatio(contentMode: .fill)
-						.frame(maxWidth: proxy.size.width, maxHeight: fullHeight ? screenDimensions.height : proxy.size.height)
+						.frame(maxWidth: proxy.size.width, maxHeight: fullHeight ? screenDimensions.height : proxy.size.height + 60)
 						.ignoresSafeArea(.all)
 					
 					
 					Color.black.opacity(0.4)
-						.frame(maxWidth: proxy.size.width, maxHeight: fullHeight ? screenDimensions.height : proxy.size.height)
+						.frame(maxWidth: proxy.size.width, maxHeight: fullHeight ? screenDimensions.height : proxy.size.height + 60)
 						.ignoresSafeArea(.all)
 				}
 			}

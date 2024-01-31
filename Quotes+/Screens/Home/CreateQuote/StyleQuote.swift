@@ -19,7 +19,6 @@ struct StyleQuote: View {
   @State private var shouldShowContent: Bool = false
   @State private var sheetPresented : Bool = false
   
-//  let animation: Namespace.ID
   var selectedColor: QuoteBackground {
     quoteConfig.getBackgroundColor()
   }

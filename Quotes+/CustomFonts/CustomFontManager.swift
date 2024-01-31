@@ -8,9 +8,10 @@
 import Foundation
 
 struct CustomFontManager {
-  public static let fontsArray = ["Default", "Merienda", "Advent Pro", "Dancing Script"]
+  public static let fontsArray = ["Default", "Merienda", "Advent Pro", "Dancing Script", "Edu Vicwantb"]
   
   static let merienda: String = "Merienda"
   static let adventPro: String = "Advent Pro"
   static let dancingScript: String = "Dancing Script"
+	static let eduvicwant: String = "Edu VIC WA NT Beginner"
 }

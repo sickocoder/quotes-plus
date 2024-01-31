@@ -49,14 +49,9 @@ struct BackgroundModifier: ViewModifier {
 }
 
 extension View {
-  func setTint(shouldApply: Bool = true, gradient: LinearGradient?, color: Color?) -> some View {
-		
-		guard gradient != nil, color != nil else {
-			return modifier(TintModifier(
-				shouldApply: shouldApply,
-				gradient: nil,
-				color: .accentColor
-			))
+	func setTint(shouldApply: Bool = true, gradient: LinearGradient?, color: Color?, isImage: Bool = false) -> some View {
+		if isImage {
+			return modifier(TintModifier(shouldApply: shouldApply, gradient: nil, color: .accentColor))
 		}
     
     return modifier(TintModifier(
@@ -66,14 +61,9 @@ extension View {
     ))
   }
   
-  func setBackground(shouldApply: Bool = true, gradient: LinearGradient?, color: Color?) -> some View {
-    
-		guard gradient != nil, color != nil else {
-			return modifier(BackgroundModifier(
-				shouldApply: shouldApply,
-				gradient: nil,
-				color: .accentColor
-			))
+  func setBackground(shouldApply: Bool = true, gradient: LinearGradient?, color: Color?, isImage: Bool = false) -> some View {
+		if isImage {
+			return modifier(BackgroundModifier(shouldApply: shouldApply, gradient: nil, color: .accentColor))
 		}
 		
     return modifier(BackgroundModifier(

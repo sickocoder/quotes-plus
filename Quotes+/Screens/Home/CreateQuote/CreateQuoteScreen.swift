@@ -34,12 +34,11 @@ struct CreateQuoteScreen: View {
         )
       }
     }
-		.onAppear {
-			PHPhotoLibrary.requestAuthorization(for: .readWrite) { (status) in
-				DispatchQueue.main.async {}
-			}
-
-		}
+//		.onAppear {
+//			PHPhotoLibrary.requestAuthorization(for: .readWrite) { (status) in
+//				DispatchQueue.main.async {}
+//			}
+//		}
     .toolbar(.hidden, for: .tabBar)
   }
 }
